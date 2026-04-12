@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Script-Type" content="text/javascript; charset=utf-8">
-    <meta property="og:url" content="http://n1n9.jp/dataviz/iPhone5sDownloadSpeed/" />
+    <meta property="og:url" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="iPhone5S キャリア別通信スピード比較" />
     <meta property="og:description" content="各メディアによるiPhone5S発売日当日の通信スピード比較をビジュアライズしました。" />
     <meta property="og:updated_time" content="1380522490" />
     <meta property="og:fb:app_id" content="459996307397263" />
-    <meta property="og:image" content="http://n1n9.jp/dataviz/iPhone5sDownloadSpeed/lib/images/ogp_image.png" />
+    <meta property="og:image" content="" />
     <title>iPhone5S キャリア別通信スピード比較</title>
     <link rel="stylesheet" href="lib/css/reset.css">
     <link rel="stylesheet" href="lib/css/style.css">
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   </head>
   
   <body>
@@ -36,24 +36,24 @@
               </div>
           </div>
           <div id="graph">
-              <div id="docomo">
-                  <img src="lib/images/docomo.png" width="" height="20px" alt="NTTDocomo logo" class="logo" />
-                  <div id="dMap"></div>
-                  <div id="dHistogram"></div>
+              <div id="docomo" class="carrier">
+                  <img src="lib/images/docomo.png" height="20px" alt="NTTDocomo logo" class="logo" />
+                  <div id="dMap" class="carrier-map"></div>
+                  <div id="dHistogram" class="carrier-histogram"></div>
               </div>
-              <div id="au">
-                  <img src="lib/images/au.png" width="" height="20px" alt="au logo" class="logo" />
-                  <div id="aMap"></div>
-                  <div id="aHistogram"></div>
+              <div id="au" class="carrier">
+                  <img src="lib/images/au.png" height="20px" alt="au logo" class="logo" />
+                  <div id="aMap" class="carrier-map"></div>
+                  <div id="aHistogram" class="carrier-histogram"></div>
               </div>
-              <div id="sb">
-                  <img src="lib/images/softbank.png" width="" height="20px" alt="SoftBank logo" class="logo" />
-                  <div id="sMap"></div>
-                  <div id="sHistogram"></div>
+              <div id="sb" class="carrier">
+                  <img src="lib/images/softbank.png" height="20px" alt="SoftBank logo" class="logo" />
+                  <div id="sMap" class="carrier-map"></div>
+                  <div id="sHistogram" class="carrier-histogram"></div>
               </div>
           </div>
           <div id="commentary">
-              <p>先日（9月20日）iPhone5Sが発売になりました。3キャリアすべてがiPhoneを扱うということで、料金プランと共に実際どこのキャリアがつながりやすいのか?ということが関心にのぼりますよね。発売日のタイミングでも各メディアが速度調査をしており、参考にしていたのですが、数字による表組のみの掲載なので直感的にわかりづらく、また色んなメディアでの調査を合わせてみると何か傾向が観てとれるのかどうなのかがわかりません。これを可視化してみようというのが本ページ作成の動機です。</p>
+              <p>先日（2013年9月20日）iPhone5Sが発売になりました。3キャリアすべてがiPhoneを扱うということで、料金プランと共に実際どこのキャリアがつながりやすいのか?ということが関心にのぼりますよね。発売日のタイミングでも各メディアが速度調査をしており、参考にしていたのですが、数字による表組のみの掲載なので直感的にわかりづらく、また色んなメディアでの調査を合わせてみると何か傾向が観てとれるのかどうなのかがわかりません。これを可視化してみようというのが本ページ作成の動機です。</p>
               <ul>
               <li>比較的調査数の多い、3つのメディアの調査結果を参照してiPhone5sのダウンロード速度のみを扱っています（<a href="http://japanese.engadget.com/2013/09/24/iphone-5s-3-au/" target="_blank">Engadget日本版</a>、<a href="http://weekly.ascii.jp/elem/000/000/173/173287/" target="_blank">週刊アスキー</a>、<a href="http://bcnranking.jp/news/1309/130921_26355.html" target="_blank">BCNランキング</a>）。</li>
               <li>データ数が少なく、統計でもビッグデータでもありません（汗）</li>
@@ -67,47 +67,9 @@
               <p>made by <a href="https://www.facebook.com/yuichi.yazaki" target="_blank">Yuichi Yazaki</a> (<a href="https://twitter.com/yuichiyazaki" target="_blank">@yuichiyazaki</a>)</p>
           </div>
           <div id="footer">
-          <ul id="sns-button">
-          <li><a href="https://twitter.com/share" class="twitter-share-button" data-via="yuichy02" data-lang="ja">ツイート</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
-
-          <li><div class="fb-like" data-href="http://n1n9.jp/dataviz/iPhone5sDownloadSpeed/" data-width="350" data-show-faces="true" data-send="false"></div></li>
-
-          <li><div class="g-plusone" data-annotation="inline" data-width="300"></div></li>
-          </ul>
 
 </div>
       </div>
     <script src="script.js"></script>
-
-    <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-    try{
-    var pageTracker = _gat._getTracker("UA-310237-4");
-    pageTracker._trackPageview();
-    } catch(err) {}</script>
-
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=459996307397263";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-    <script type="text/javascript">
-      window.___gcfg = {lang: 'ja'};
-
-      (function() {
-        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-        po.src = 'https://apis.google.com/js/plusone.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-      })();
-    </script>
-
 </body>
 </html>

@@ -1,203 +1,171 @@
+:root {
+	--container-w: 880px;
+	--graph-w: 900px;
+	--interface-w: 620px;
+	--description-w: 254px;
+	--carrier-w: 300px;
+	--carrier-map-w: 290px;
+	--carrier-hist-w: 280px;
+	--legend-desc-w: 120px;
+	--legend-desc-h: 38px;
+	--gap: 10px;
+	--border-color: #ccc;
+	--panel-bg: #eee;
+	--muted: #aaa;
+	--text: #333;
+}
+
 body {
 	margin: 0;
 }
 
 h1 {
-	margin: 30px auto 10px auto;
-}
-
-#date {
-	
+	margin: 30px auto 10px;
 }
 
 #container {
-	width: 880px;
-	margin: 0 auto 0 auto;
+	width: var(--container-w);
+	margin: 0 auto;
 }
 
 #header {
-	width: 880px;
+	width: var(--container-w);
 	height: 50px;
 	text-align: center;
 }
 
 #legend {
-	width: 880px;
+	width: var(--container-w);
 	height: 40px;
-	border-top: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	border-top: 1px solid var(--border-color);
+	border-bottom: 1px solid var(--border-color);
+	padding: 5px 0;
 	margin-bottom: 20px;
-	
 }
 
 #interface {
-	width: 620px;
+	width: var(--interface-w);
 	height: 40px;
 	font-size: 10px;
 	float: left;
 }
 
 #description {
-	width: 254px;
+	width: var(--description-w);
 	height: 40px;
 	float: right;
 }
 
+#descMap,
+#descHistogram {
+	width: var(--legend-desc-w);
+	height: var(--legend-desc-h);
+	background-color: var(--panel-bg);
+	border: 1px solid var(--border-color);
+}
+
 #descMap {
-	width: 120px;
-	height: 38px;
-	background-color: #eee;
-	border: 1px solid #ccc;
 	float: left;
-	margin-right: 10px;
+	margin-right: var(--gap);
 }
 
 #descHistogram {
-	width: 120px;
-	height: 38px;
-	background-color: #eee;
-	border: 1px solid #ccc;
 	float: right;
 }
 
 #menu-title {
-	color: #aaa;
+	color: var(--muted);
 }
 
 #menu-desc {
-	width: 620px;
+	width: var(--interface-w);
 	height: 20px;
-	background-color: #333;	
+	background-color: var(--text);
 	float: left;
 }
 
 #menu-desc-text {
-    color: #FFF;
-   	margin: 0 10px 0 10px;
-   	float: left;
+	color: #fff;
+	margin: 0 var(--gap);
+	float: left;
 }
 
 ul#media-menu {
-	width: 620px;
+	width: var(--interface-w);
 	height: 20px;
 	padding: 0;
 	margin: 0;
-
 }
 
 ul#media-menu li {
 	display: block;
 	float: left;
-	margin-right: 10px;
-    cursor: pointer;
-    color: #CCC;
+	margin-right: var(--gap);
+	cursor: pointer;
+	color: #ccc;
 }
 
 ul#media-menu li.selected {
-  font-weight: bold; 
-   color: #FFF;
-}
-
-#main {
-	width: 880px;
-	height: 300px;
+	font-weight: bold;
+	color: #fff;
 }
 
 #graph {
-	width: 900px;
+	width: var(--graph-w);
 	height: 430px;
 	margin-bottom: 30px;
 }
 
-#docomo,
-#au,
-#sb {
-	width: 300px;
+.carrier {
+	width: var(--carrier-w);
 	height: 430px;
 	float: left;
-	/* border-right: 1px solid #333333; */
 }
 
-
-#dMap, #aMap {
-	width: 290px;
-	height: 290px;
-	margin-right: 10px;
+.carrier-map {
+	width: var(--carrier-map-w);
+	height: var(--carrier-map-w);
+	margin-right: var(--gap);
 }
 
-#sMap {
-	width: 290px;
-	height: 290px;
-	margin-right: 0px;
+.carrier-histogram {
+	width: var(--carrier-hist-w);
+	height: 121px;
+	margin-right: var(--gap);
+	background-color: var(--panel-bg);
+}
+
+.carrier:last-child .carrier-map,
+.carrier:last-child .carrier-histogram {
+	margin-right: 0;
 }
 
 .logo {
-display:block;
-	margin: 0 auto 10px auto;
-	
+	display: block;
+	margin: 0 auto 10px;
 }
 
+/* Histogram */
 
-
-/* @group Histogram */
-
-.bar  {
-  float: left;
+.bar {
+	shape-rendering: crispEdges;
 }
 
-.bar rect {
-  shape-rendering: crispEdges;
+.axis path,
+.axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
 }
-
-.bar text {
-  fill: #fff;
-}
-
-.axis path, .axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-#dHistogram, #aHistogram {
-	width: 280px;
-	height: 121px;
-	margin-right: 10px;
-	background-color: #eee;
-}
-
-#sHistogram {
-	width: 280px;
-	height: 121px;
-	background-color: #eee;
-}
-
-/* @end */
-
-
 
 #commentary {
 	font-size: 12px;
 	line-height: 1.5em;
-	color: #333;
+	color: var(--text);
 	margin-bottom: 60px;
 }
 
-
 #footer {
-	width: 880px;
+	width: var(--container-w);
 	height: 60px;
 }
-
-#sns-button {
-	width: 880px;
-	padding: 0;
-}
-
-#sns-button li {
-	list-style-type: none;
-	float: left;
-}
-  
