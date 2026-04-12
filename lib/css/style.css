@@ -1,0 +1,203 @@
+body {
+	margin: 0;
+}
+
+h1 {
+	margin: 30px auto 10px auto;
+}
+
+#date {
+	
+}
+
+#container {
+	width: 880px;
+	margin: 0 auto 0 auto;
+}
+
+#header {
+	width: 880px;
+	height: 50px;
+	text-align: center;
+}
+
+#legend {
+	width: 880px;
+	height: 40px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+	
+}
+
+#interface {
+	width: 620px;
+	height: 40px;
+	font-size: 10px;
+	float: left;
+}
+
+#description {
+	width: 254px;
+	height: 40px;
+	float: right;
+}
+
+#descMap {
+	width: 120px;
+	height: 38px;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	float: left;
+	margin-right: 10px;
+}
+
+#descHistogram {
+	width: 120px;
+	height: 38px;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	float: right;
+}
+
+#menu-title {
+	color: #aaa;
+}
+
+#menu-desc {
+	width: 620px;
+	height: 20px;
+	background-color: #333;	
+	float: left;
+}
+
+#menu-desc-text {
+    color: #FFF;
+   	margin: 0 10px 0 10px;
+   	float: left;
+}
+
+ul#media-menu {
+	width: 620px;
+	height: 20px;
+	padding: 0;
+	margin: 0;
+
+}
+
+ul#media-menu li {
+	display: block;
+	float: left;
+	margin-right: 10px;
+    cursor: pointer;
+    color: #CCC;
+}
+
+ul#media-menu li.selected {
+  font-weight: bold; 
+   color: #FFF;
+}
+
+#main {
+	width: 880px;
+	height: 300px;
+}
+
+#graph {
+	width: 900px;
+	height: 430px;
+	margin-bottom: 30px;
+}
+
+#docomo,
+#au,
+#sb {
+	width: 300px;
+	height: 430px;
+	float: left;
+	/* border-right: 1px solid #333333; */
+}
+
+
+#dMap, #aMap {
+	width: 290px;
+	height: 290px;
+	margin-right: 10px;
+}
+
+#sMap {
+	width: 290px;
+	height: 290px;
+	margin-right: 0px;
+}
+
+.logo {
+display:block;
+	margin: 0 auto 10px auto;
+	
+}
+
+
+
+/* @group Histogram */
+
+.bar  {
+  float: left;
+}
+
+.bar rect {
+  shape-rendering: crispEdges;
+}
+
+.bar text {
+  fill: #fff;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#dHistogram, #aHistogram {
+	width: 280px;
+	height: 121px;
+	margin-right: 10px;
+	background-color: #eee;
+}
+
+#sHistogram {
+	width: 280px;
+	height: 121px;
+	background-color: #eee;
+}
+
+/* @end */
+
+
+
+#commentary {
+	font-size: 12px;
+	line-height: 1.5em;
+	color: #333;
+	margin-bottom: 60px;
+}
+
+
+#footer {
+	width: 880px;
+	height: 60px;
+}
+
+#sns-button {
+	width: 880px;
+	padding: 0;
+}
+
+#sns-button li {
+	list-style-type: none;
+	float: left;
+}
+  
